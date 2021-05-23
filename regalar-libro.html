@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::REGALANDO LIBRO::</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body class="body">
+    <input type="checkbox" id="mostrar-check">
+    <div class="loading">
+        <div class="load">
+        </div>
+        <div class="section left"></div>
+        <div class="section right"></div>
+    </div>
+    <a class="whatsapp" href="https://api.whatsapp.com/send?phone=51941285021&text=Este%20es%20un%20mensaje%20de%20prueba" target="_blank">
+        <i class="fa fa-3x fa-whatsapp"></i>
+    </a>
+    <header class="cabecera">
+        <nav class="nav">
+            <input type="checkbox" class="nav-check" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">Desarrollo & Liderazgo</div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span><span></span><span></span>
+                </label>
+            </div>
+            <div class="nav-links">
+                <a href="">Sendy Yaranga</a>
+                <a href="index.html" class="active">Libros Gratis</a>
+                <a href="">Negocios Digitales</a>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <!--Regalando libro-->
+        <section class="regalo-nombre contenido line-bottom">
+            <h1 class="titulo-libro">Regalar el libro "Ama y no sufras"</h1>
+            <p class="autor-libro">Autor: Walter Riso</p>
+        </section>
+        <section class="regalo-mensaje contenido">
+            <p>Personaliza tu mensaje para enviar tu regalo</p>
+        </section>
+        <section class="regalo contenido">
+            <!-- <div class="regalo-caratula">
+                <img src="./assets/img/otros/caratula-regalo-default.jpg" alt="Carátula del regalo">
+                <input type="file" class="form-control">
+            </div> -->
+            <div class="regalo-contenido">
+                <div class="regalo-portada">
+                    <img src="./assets/img/books/ama-y-no-sufras.jpg" alt="Ama y no sufras - carátula">
+                </div>
+                <div class="regalo-personalizacion">
+                    <form action="#" class="form-regalo">
+                        <div class="regalo-input">
+                            <label for="txtremitente">Remitente</label>
+                            <input type="text" class="form-control" id="txtremitente" autocomplete="off" name="txtremitente" placeholder="Escribe tu nombre">
+                            <span>Aparecerá como la persona que hace el regalo.</span>
+                        </div>
+                        <div class="regalo-input">
+                            <label for="txtdestinatario">Destinatario</label>
+                            <input type="text" class="form-control" id="txtdestinatario" name="txtdestinatario" autocomplete="off" placeholder="Nombre del destinatario">
+                            <span>El nombre de la persona a la que se le envía el regalo.</span>
+                        </div>
+                        <div class="regalo-input">
+                            <label for="txtdedicatoria">Dedicatoria</label>
+                            <textarea class="form-control"></textarea>
+                            <span>2000 caracteres disponibles. Escribe aquí tu mensaje.</span>
+                        </div>
+                        <div class="regalo-actions">
+                            <button class="form-button-create" type="button"><i class="fa fa-gift"></i> Crear
+                                Regalo</button>
+                            <button class="form-button-cancel" type="button"><i class="fa fa-trash"></i>
+                                Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="pie">
+        <div class="up">
+            <div class="content">
+                <h3>Entérate de las novedades</h3>
+                <p>Suscríbete y te pondremos al día con nuevo contenido.</p>
+                <form action="#">
+                    <input type="email" name="email" id="email" autocomplete="off" placeholder="Escribe tu email">
+                    <button><i class="fa fa-envelope"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="down">
+            <div class="content">
+                <p>&copy; 2020 todos los derechos reservados</p>
+                <p>Sitio Web desarrollado por Juan Aldair</p>
+            </div>
+        </div>
+    </footer>
+    <!--Modal para notificar que el regalo está preparado-->
+    <div class="modal modal-regalo">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <p>Tu regalo está preparado</p>
+                </div>
+                <div class="modal-close">
+                    <label for="mostrar-check">x</label>
+                </div>
+            </div>
+            <div class="modal-body">
+                <section class="modal-body-title">
+                    <p>Libro "Ama y no sufras" de Walter Riso</p>
+                </section>
+                <section class="modal-body-enlace">
+                    <p>Envía o comparte con Remitente el siguiente enlace:</p>
+                    <input type="text" class="form-control" id="txtenlace" autocomplete="off" name="txtenlace">
+                </section>
+                <section class="modal-body-botones">
+                    <button class="btn-copiar"><i class="fa fa-copy"></i>Copiar enlace</button>
+                    <button class="btn-ver" onclick="window.location = 'regalo.html';"><i class="fa fa-eye"></i>Ver
+                        resultado</button>
+                    <button class="btn-volver"><i class="fa fa-home"></i>Volver al repositorio</button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./assets/libs/owl-carousel/owl.carousel.min.js"></script>
+    <script src="https://use.fontawesome.com/707232b6cb.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script>
+        $(".form-button-create").click(function() {
+            $("#mostrar-check").prop("checked", true);
+        })
+    </script>
+</body>
+
+</html>
